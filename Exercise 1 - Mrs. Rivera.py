@@ -11,11 +11,15 @@ def raise_to(base, power):
             answer = answer * base
         return answer
 
-try:
-    user_base = int(input("What is your base? "))
-    user_exponent = int(input('What number should we raise it to? '))
+def initilization():
+    try:
+        user_base = int(input("What is your base? "))
+        user_exponent = int(input('What number should we raise it to? '))
 
-    print(raise_to(user_base, user_exponent))
+        print(raise_to(user_base, user_exponent))
 
-except ValueError:
-    print("Please enter an integer value for both the base and the exponent.")
+    except ValueError:
+        print("Please enter an integer value for both the base and the exponent.")
+        initilization()
+
+initilization()
